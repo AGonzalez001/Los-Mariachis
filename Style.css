@@ -1,0 +1,31 @@
+* {
+    /* Sets all elements to fit under these parameters */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Background Images */
+.background:nth-child(1) {
+    background: url('Los Mariachis Website/Photos/Front.png') no-repeat center;
+}
+.logo {
+    background: url('Los Mariachis Website/Small_Logo.png') no-repeat center;
+}
+.background:nth-child(2) {
+    background: url('Los Mariachis Website/Photos/Drinks.png') no-repeat center;
+    background-attachment: fixed;
+}
+.background:nth-child(3) {
+    background: url('Los Mariachis Website/Photos/Singer.png') no-repeat center;
+    background-attachment: fixed;
+}
+.background:nth-child(4) {
+    background: url('Los Mariachis Website/Photos/Band.png') no-repeat center;
+    background-attachment: fixed;
+}
+.background:nth-child(5) {
+    background: url('Los Mariachis Website/Photos/Bar.png') no-repeat center;
+    background-attachment: fixed;
+}
+/* _________________ */
