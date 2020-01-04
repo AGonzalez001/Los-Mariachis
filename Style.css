@@ -1,11 +1,5 @@
-* {
-    /* Sets all elements to fit under these parameters */
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-@keyframes fadeIn{
+/* Multiple Parallax Effect */
+@keyframes fade_in{
     0% {
         opacity: 0;
     }
@@ -13,37 +7,29 @@
         opacity: 1;
     }
 }
-/* Background Images */
-#black {
-    background-color: black;
+body {
+  animation: fade_in 3s;
 }
-.background:nth-child(1) {
-    background: url('Los Mariachis Website/Photos/Front.png') no-repeat center;
+.fade_top {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(black, transparent);
+  opacity: .4;
+  pointer-events: none;
 }
-.background {
-    animation: fadeIn 2s;
-}
-.background:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(black, transparent);
-    opacity: .4;
-    pointer-events: none;
-}
-.background:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(360deg, black, transparent);
-    opacity: .4;
-    pointer-events: none;
+.fade_bottom {
+  content: '';
+  position: relative;
+  top: 865px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, black);
+  opacity: .4;
+  pointer-events: none;
 }
 .logo {
     height: 500px;
@@ -56,24 +42,144 @@
     margin-right: auto;
     /* ______ */
     border: 5px solid white;
-    background: url('Los Mariachis Website/Small_Logo.png') no-repeat center;
+    background: url("Photos/Small_Logo.png") no-repeat center;
     box-shadow: 50px 50px 100px black;
     opacity: .9;
 }
-.background:nth-child(2) {
-    background: url('Los Mariachis Website/Photos/Drinks.png') no-repeat center;
+.center {
+  height: auto;
+  text-align: center;
+  padding-top: 15% ;
+}
+h1{
+  height: auto;
+  width: auto;
+  font-size: 4em;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 10px 40px black;
+  padding: 2%;
+  display:inline-block;
+}
+h1 a {
+  text-decoration: none;
+  height: auto;
+  width: auto;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  display:inline-block;
+}
+#Home {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("Photos/Front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
-.background:nth-child(3) {
-    background: url('Los Mariachis Website/Photos/Singer.png') no-repeat center;
+#Reservation {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("Photos/Back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
-.background:nth-child(4) {
-    background: url('Los Mariachis Website/Photos/Band.png') no-repeat center;
+#img3 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("Photos/Singer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
-.background:nth-child(5) {
-    background: url('Los Mariachis Website/Photos/Bar.png') no-repeat center;
+#Contact {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("Photos/Band.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
-/* _________________ */
+/* ________________________ */
+/* Navbar 1 */
+* {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+#navbar {
+    width: 100%;
+    height: 140px;
+    background-color: black;
+    position: fixed;
+    opacity: .8;
+    z-index: 100;
+}
+.inner_navbar {
+    margin: 0 auto;
+    width: 1170px;
+    height: 140px;
+}
+.inner_navbar ul {
+    margin: 0;
+    padding: 49px;
+    list-style: none;
+    text-align: right;
+}
+.inner_navbar ul li {
+    width: auto;
+    float: none;
+    display: inline-block;
+}
+.inner_navbar ul li:nth-child(1) {
+    float: left;
+}
+.inner_navbar ul li:nth-child(2) {
+    float: left;
+}
+.inner_navbar ul li a {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.inner_navbar ul li a:hover {
+    /* What it does when hovered */
+}
+.logo_area {
+    width: 300px;
+    height: 140px;
+    background-image: url("Logo.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: "";
+    margin-left: -150px;
+
+}
+#bottembar {
+    height: 100px;
+    background-color: black;
+    opacity: .8;
+    position: fixed;
+    bottom: 0;
+
+}
+/* ________ */
