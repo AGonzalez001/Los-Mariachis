@@ -1,6 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="slicknav.min.css">
+    <style media="screen">
+    .slicknav_menu {
+      font-size: 20px;
+      background: none;
+      padding: 10px;
+      height: auto;
+      width: 100%;
+      position: fixed;
+      right: 0;
+      z-index: 9999;
+      display: none;
+    }
+    ul.slicknav_nav {
+      background: #262626;
+      top: 0;
+      width: 80%;
+      left: 0;
+    }
+    @media only screen and (min-width: 200px) and (max-width: 767px) {
+      .slicknav_menu{display: block;}
+      .inner_navbar{display: none;}
+    }
+    </style>
     <title>Los Mariachis</title>
 </head>
 <body>
@@ -8,9 +33,9 @@
     <div id="navbar">
         <div class="logo_area"></div>
         <div class="inner_navbar">
-            <ul>
+            <ul id="menu">
                 <li><a href="#Home">Home</a></li>
-                <li><a href="https://www.grubhub.com/restaurant/los-mariachis-mexican-restaurant-805-coney-island-ave-brooklyn/1118889?utm_source=bing&utm_source=bing&utm_medium=cpc&utm_medium=cpc&utm_campaign=New%20York%2C%20NY%20%7C%20Brooklyn%2C%20NY%20%7C%20Restaurants&utm_term=%2Blos%20%2Bmariachis%20%2Bmexican%20%2Brestaurant&utm_term=%2Blos%20%2Bmariachis%20%2Bmexican%20%2Brestaurant&efkwid=75179291440881&msclkid=0f78ea3fe5121c6583eab42fff5488cd&utm_content=1118889%20%7C%20Los%20Mariachis%20Mexican%20Restaurant&gclid=CLTE0aqT6eYCFUuWswodae8Dcg&gclsrc=ds">Menu</a></li>
+                <li><a href="https://www.grubhub.com/restaurant/los-mariachis-mexican-restaurant-805-coney-island-ave-brooklyn/1118889">Menu</a></li>
                 <li><a href="#Reservation">Reservation</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
@@ -34,5 +59,12 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#menu').slicknav();
+      });
+    </script>
 </body>
 </html>
