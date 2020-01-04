@@ -60,6 +60,7 @@ h1{
   box-shadow: 0 10px 40px black;
   padding: 2%;
   display:inline-block;
+  /* background: url("Photos/Mexican Colors.png") center; */
 }
 h1 a {
   text-decoration: none;
@@ -69,6 +70,7 @@ h1 a {
   font-weight: bold;
   color: white;
   display:inline-block;
+  /* background: url("Photos/Mexican Colors.png") center; */
 }
 #Home {
     width: 100%;
@@ -113,6 +115,7 @@ h1 a {
 /* ________________________ */
 /* Navbar 1 */
 * {
+    /* width: 100%; */
     height: 100%;
     margin: 0;
     font-family: 'Oswald', sans-serif;
